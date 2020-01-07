@@ -324,6 +324,7 @@ func TestOperatorPrecedenceParsing(t *testing.T) {
 			"3 + 4 * 5 == 3 * 1 + 4 * 5",
 			"((3 + (4 * 5)) == ((3 * 1) + (4 * 5)))",
 		},
+		// bool expressionのテスト
 		{
 			"true",
 			"true",
@@ -340,6 +341,7 @@ func TestOperatorPrecedenceParsing(t *testing.T) {
 			"3 < 5 == true",
 			"((3 < 5) == true)",
 		},
+		// grouped expressionのテスト
 		{
 			"1 + (2 + 3) + 4",
 			"((1 + (2 + 3)) + 4)",
