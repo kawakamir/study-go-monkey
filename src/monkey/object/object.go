@@ -80,3 +80,4 @@ func (f *Function) Inspect() string {
 
 	return out.String()
 }
+
