@@ -6,15 +6,15 @@ import (
 	"io"
 	"monkey/evaluator"
 	"monkey/lexer"
-	"monkey/parser"
 	"monkey/object"
+	"monkey/parser"
 )
 
 const PROMPT = ">> "
 
 func Start(in io.Reader, out io.Writer) {
 	scanner := bufio.NewScanner(in)
-	eval := object.NewEnvironment()
+	env := object.NewEnvironment()
 
 	for {
 		fmt.Printf(PROMPT)
